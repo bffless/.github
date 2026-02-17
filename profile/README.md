@@ -19,12 +19,32 @@
 BFFLESS is a static asset hosting platform that makes deploying and serving your frontend applications simple, fast, and reliable.
 
 ```mermaid
-flowchart TB
-    A[Build] --> B[Upload Action]
-    B --> C[BFFLESS API]
-    C --> D[(Storage)]
-    D --> E[CDN/Server]
-    E --> F[Browser]
+flowchart LR
+    subgraph CI/CD
+        GHA[GitHub Actions]
+    end
+
+    subgraph BFFless
+        API[Upload API]
+        nginx[nginx]
+        Backend[Backend]
+        DB[(PostgreSQL)]
+        Storage[(Storage<br/>S3/MinIO/GCS/Azure)]
+    end
+
+    subgraph Users
+        Browser[Browser]
+    end
+
+    GHA -->|upload assets| API
+    API --> Storage
+    API --> DB
+
+    Browser -->|request| nginx
+    nginx --> Backend
+    Backend --> DB
+    Backend --> Storage
+    Backend -->|serve content| nginx
 ```
 
 ## What is BFFLESS?
