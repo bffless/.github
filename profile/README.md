@@ -71,16 +71,16 @@ Integrate BFFLESS into your CI/CD pipeline:
 ```yaml
 - uses: bffless/upload-artifact@v1
   with:
-    bffless-url: https://your-bffless-instance.com
+    bffless-url: https://admin.your-bffless-instance.com
     api-key: ${{ secrets.BFFLESS_API_KEY }}
     path: dist/
 ```
 
 ## Repositories
 
-| Repository | Description |
-|------------|-------------|
-| [ce](https://github.com/bffless/ce) | Community Edition — self-hosted static asset hosting |
-| [upload-artifact](https://github.com/bffless/upload-artifact) | GitHub Action to upload build artifacts |
-| [download-artifact](https://github.com/bffless/download-artifact) | GitHub Action to download artifacts |
-| [docs-public](https://github.com/bffless/docs-public) | Documentation site source |
+| Repository                                                        | Description                                          |
+| ----------------------------------------------------------------- | ---------------------------------------------------- |
+| [ce](https://github.com/bffless/ce)                               | Community Edition — self-hosted static asset hosting |
+| [upload-artifact](https://github.com/bffless/upload-artifact)     | GitHub Action to upload build artifacts              |
+| [download-artifact](https://github.com/bffless/download-artifact) | GitHub Action to download artifacts                  |
+| [docs-public](https://github.com/bffless/docs-public)             | Documentation site source                            |
