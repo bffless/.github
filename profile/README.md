@@ -19,27 +19,12 @@
 BFFLESS is a static asset hosting platform that makes deploying and serving your frontend applications simple, fast, and reliable.
 
 ```mermaid
-flowchart LR
-    subgraph CI/CD
-        A[Build] --> B[Upload Action]
-    end
-
-    subgraph BFFLESS
-        B --> C[API]
-        C --> D[(Storage)]
-        D --> E[CDN/Server]
-    end
-
-    subgraph Users
-        E --> F[Browser]
-    end
-
-    style A fill:#2d333b,stroke:#444
-    style B fill:#238636,stroke:#2ea043
-    style C fill:#1f6feb,stroke:#388bfd
-    style D fill:#1f6feb,stroke:#388bfd
-    style E fill:#1f6feb,stroke:#388bfd
-    style F fill:#2d333b,stroke:#444
+flowchart TB
+    A[Build] --> B[Upload Action]
+    B --> C[BFFLESS API]
+    C --> D[(Storage)]
+    D --> E[CDN/Server]
+    E --> F[Browser]
 ```
 
 ## What is BFFLESS?
@@ -55,11 +40,9 @@ BFFLESS provides a streamlined way to host static assets with powerful features:
 
 ### Self-Host with Community Edition
 
-Deploy BFFLESS on your own infrastructure with Docker Compose:
+Deploy BFFLESS on your own infrastructure with Docker Compose.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/bffless/ce/main/install.sh | bash
-```
+**[View the Quickstart Guide](https://docs.bffless.app/getting-started/quickstart/)**
 
 ### GitHub Actions
 
