@@ -5,7 +5,7 @@
 <h1 align="center">BFFLESS</h1>
 
 <p align="center">
-  <strong>The BFF your static frontend deserves.</strong>
+  <strong>The home for your AI-generated apps, internal tools, and HTML docs — with a backend, auth, and a path to your internal services.</strong>
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 ---
 
-BFFLESS is a static asset hosting platform that makes deploying and serving your frontend applications simple, fast, and reliable.
+BFFLESS gives static frontends real backend capabilities — somewhere the apps, internal tools, and HTML docs your team and your AI coding agents generate can actually live, with a backend, auth, and a path to your internal services, behind your corporate boundary. _Technically: a self-hosted Supabase/Appwrite aimed at static sites and internal apps._
 
 ```mermaid
 flowchart LR
@@ -49,8 +49,9 @@ flowchart LR
 
 ## What is BFFLESS?
 
-BFFLESS provides a streamlined way to host static assets with powerful features:
+BFFLESS provides a streamlined way to host static apps, internal tools, and docs with powerful features:
 
+- **A backend for static frontends** — Auth, a reverse proxy to your internal services, and a no-code pipeline runtime — no server to run
 - **Instant Deployments** — Push your builds and they're live immediately
 - **Version Management** — Roll back to any previous deployment with one click
 - **Custom Domains** — Connect your own domains with automatic SSL
